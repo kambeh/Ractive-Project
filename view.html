@@ -9,11 +9,16 @@
       .progress-bar div {
           height: 30px;
           border: 1px solid grey;
+		  text-align: center;
       }
       .progress-bar p {
           margin: 10px 0 2px 0;
           font-size: 1.5em;
       }
+	  .progress-bar span {
+		  font-size: 1.2em;
+		  margin-top: 20px;
+	  }
       .action-buttons {
           margin-top: 15px;
       }
@@ -30,15 +35,15 @@
       <div class="progress-bar">
         <p>Top bar:</p>
         <div style='background-color: {{tbarcolor}};
-                    width: {{tbar * 100}}%;'></div>
+                    width: {{tbar * 100}}%;'><span>{{tbar * 100}}%</span></div>
 
         <p>Middle bar:</p>
         <div style='background-color: {{mbarcolor}};
-                    width: {{mbar * 100}}%;'></div>
+                    width: {{mbar * 100}}%;'><span>{{mbar * 100}}%</span></div>
 
         <p>Bottom bar:</p>
         <div style='background-color: {{ubarcolor}};
-                    width: {{ubar * 100}}%;'></div>
+                    width: {{ubar * 100}}%;'><span>{{ubar * 100}}%</span></div>
       </div>
       
       <div class="action-buttons">
@@ -53,6 +58,6 @@
         <button on-click='pos25'>+25</button>
       </div>
   </script>
-  <script src='main.js'></script>
+  <script src='main_5.js'></script>
 </body>
 </html>
