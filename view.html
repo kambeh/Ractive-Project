@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ractive - Customised progress bar</title>
+
+  <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+  <style type='text/css'>
+      .progress-bar div {
+          height: 30px;
+          border: 1px solid grey;
+      }
+      .progress-bar p {
+          margin: 10px 0 2px 0;
+          font-size: 1.5em;
+      }
+      .action-buttons {
+          margin-top: 15px;
+      }
+  </style>
+</head>
+<body>
+
+<div id='container'></div>
+  <script id='template' type='text/ractive'>
+      <div class='boxxy-container'>
+            <h1>{{name}}</h1>
+      </div>
+      
+      <div class="progress-bar">
+        <p>Top bar:</p>
+        <div style='background-color: {{barcolor}};
+                    width: {{tbar * 100}}%;'></div>
+
+        <p>Middle bar:</p>
+        <div style='background-color: grey;
+                    width: {{mbar * 100}}%;'></div>
+
+        <p>Bottom bar:</p>
+        <div style='background-color: grey;
+                    width: {{ubar * 100}}%;'></div>
+      </div>
+      
+      <div class="action-buttons">
+        <button on-click='neg25'>-25</button>
+        <button on-click='neg10'>-10</button>
+        <button on-click='pos10'>+10</button>
+        <button on-click='pos25'>+25</button>
+      </div>
+  </script>
+  <script src='main_1.js'></script>
+</body>
+</html>
